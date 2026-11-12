@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<meta name="mobile-web-app-capable" content="yes">
+<title>Funky Monkey — Prototype 7 Mondes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <canvas id="game"></canvas>
+
+  <div id="hud" class="hidden">
+    <div id="hearts">❤️❤️❤️</div>
+    <div id="bananas">🍌 0</div>
+    <div id="worldname"></div>
+    <button id="pausebtn">⏸</button>
+  </div>
+
+  <div id="banner" class="hidden"></div>
+
+  <div id="controls" class="hidden">
+    <div class="pad">
+      <button id="btn-left">◀</button>
+      <button id="btn-right">▶</button>
+    </div>
+    <div class="acts">
+      <button id="btn-atk">👊</button>
+      <button id="btn-jump">⤒</button>
+    </div>
+  </div>
+
+  <div id="screen-title" class="screen">
+    <div class="logo">FUNKY MONKEY</div>
+    <div class="tagline">Edgar von Bobono contre les 7 Mondes — prototype jouable</div>
+    <button id="btn-play" class="bigbtn">JOUER</button>
+    <button id="btn-mute" class="smallbtn">🔊 Son : ON</button>
+    <div class="hint">
+      📱 Téléphone : boutons tactiles en bas de l'écran.<br>
+      💻 Ordinateur : flèches ← → , Espace = sauter, X = attaquer.<br>
+      Écrase les ennemis, ramasse les bananes, bats le boss de chaque monde !
+    </div>
+    <div class="tagline">D'après le pitch FUNKY MONKEY — Take OFF 2026</div>
+  </div>
+
+  <div id="screen-map" class="screen hidden">
+    <h2>CARTE DES 7 MONDES</h2>
+    <div id="worldgrid"></div>
+    <button id="btn-map-title" class="smallbtn">← Titre</button>
+  </div>
+
+  <div id="screen-dead" class="screen hidden">
+    <h2>OUCH ! EDGAR EST TOMBÉ…</h2>
+    <div class="hint">Pas de panique : le show doit continuer !</div>
+    <button id="btn-retry" class="bigbtn">RÉESSAYER</button>
+    <button id="btn-dead-map" class="smallbtn">Carte des mondes</button>
+  </div>
+
+  <div id="screen-complete" class="screen hidden">
+    <h2 id="complete-title">MONDE TERMINÉ !</h2>
+    <div id="complete-score" class="tagline"></div>
+    <button id="btn-next" class="bigbtn">MONDE SUIVANT →</button>
+    <button id="btn-complete-map" class="smallbtn">Carte des mondes</button>
+  </div>
+
+  <div id="screen-win" class="screen hidden">
+    <div class="logo">VICTOIRE !</div>
+    <h2>GORILLA KING EST VAINCU</h2>
+    <div class="hint">Edgar von Bobono a libéré les 7 Mondes !<br>
+    Prochaines étapes : visuels définitifs, nouveaux mondes, Funky Pass…</div>
+    <div id="win-score" class="tagline"></div>
+    <button id="btn-win-map" class="bigbtn">REJOUER</button>
+  </div>
+
+  <div id="screen-pause" class="screen hidden">
+    <h2>PAUSE</h2>
+    <button id="btn-resume" class="bigbtn">CONTINUER</button>
+    <button id="btn-quit" class="smallbtn">Quitter → carte</button>
+  </div>
+</div>
+
+<script src="js/audio.js"></script>
+<script src="js/input.js"></script>
+<script src="js/worlds.js"></script>
+<script src="js/entities.js"></script>
+<script src="js/bosses.js"></script>
+<script src="js/game.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
